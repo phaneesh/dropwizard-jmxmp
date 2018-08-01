@@ -50,3 +50,15 @@ This makes it possible to use JMX over JMXMP.
 ```
 -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005
 ```
+* Use the following commandline to start Jconsole with jmxmp support
+```
+jconsole -J-Djava.class.path=/usr/lib/jvm/java-8-oracle/lib/jconsole.jar:/usr/lib/jvm/java-8-oracle/lib/tools.jar:$HOME/.m2/repository/org/glassfish/main/external/jmxremote_optional-repackaged/5.0/jmxremote_optional-repackaged-5.0.jar
+```
+* Use the following commandline to start VisualVM with jmxmp support
+```
+jvisualvm --cp:a $HOME/.m2/repository/org/glassfish/main/external/jmxremote_optional-repackaged/5.0/jmxremote_optional-repackaged-5.0.jar
+```
+* To use it with JMC add the following line in the end in ```jmc.ini```
+```
+-Xbootclasspath/a:~/.m2/repository/org/glassfish/main/external/jmxremote_optional-repackaged/5.0/jmxremote_optional-repackaged-5.0.jar
+```
