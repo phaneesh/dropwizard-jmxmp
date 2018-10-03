@@ -62,3 +62,8 @@ jvisualvm --cp:a $HOME/.m2/repository/org/glassfish/main/external/jmxremote_opti
 ```
 -Xbootclasspath/a:~/.m2/repository/org/glassfish/main/external/jmxremote_optional-repackaged/5.0/jmxremote_optional-repackaged-5.0.jar
 ```
+
+* Service URL format
+```
+service:jmx:jmxmp://<host>:<port>
+```
