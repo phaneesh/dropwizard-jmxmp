@@ -1,7 +1,7 @@
 # Dropwizard JMXMP Bundle [![Travis build status](https://travis-ci.org/phaneesh/dropwizard-jmxmp.svg?branch=master)](https://travis-ci.org/phaneesh/dropwizard-jmxmp)
 
 This bundle adds support for jmx over jmxmp which is the only way to make jmx work on marathon 
-This bundle compiles only on Java 8.
+This bundle compiles only on Java 11.
  
 ## Usage
 This makes it possible to use JMX over JMXMP.
@@ -21,7 +21,7 @@ This makes it possible to use JMX over JMXMP.
 <dependency>
     <groupId>io.dropwizard.jmxmp</groupId>
     <artifactId>dropwizard-jmxmp</artifactId>
-    <version>2.0.16-1</version>
+    <version>2.0.20-1</version>
 </dependency>
 ```
 
@@ -52,15 +52,15 @@ This makes it possible to use JMX over JMXMP.
 ```
 * Use the following commandline to start Jconsole with jmxmp support
 ```
-jconsole -J-Djava.class.path=/usr/lib/jvm/java-8-oracle/lib/jconsole.jar:/usr/lib/jvm/java-8-oracle/lib/tools.jar:$HOME/.m2/repository/org/glassfish/main/external/jmxremote_optional-repackaged/5.0/jmxremote_optional-repackaged-5.0.jar
+jconsole -J-Djava.class.path=$JAVA_HOME/lib/tools.jar:/path/to/jmxremote_optional-repackaged-5.0.jar
 ```
 * Use the following commandline to start VisualVM with jmxmp support
 ```
-jvisualvm --cp:a $HOME/.m2/repository/org/glassfish/main/external/jmxremote_optional-repackaged/5.0/jmxremote_optional-repackaged-5.0.jar
+jvisualvm --cp:a /path/to/jmxremote_optional-repackaged-5.0.jar
 ```
 * To use it with JMC add the following line in the end in ```jmc.ini```
 ```
--Xbootclasspath/a:~/.m2/repository/org/glassfish/main/external/jmxremote_optional-repackaged/5.0/jmxremote_optional-repackaged-5.0.jar
+-Xbootclasspath/a:/path/to/jmxremote_optional-repackaged-5.0.jar
 ```
 
 * Service URL format
