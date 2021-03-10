@@ -10,6 +10,7 @@ import javax.management.remote.JMXConnectorServerFactory;
 import javax.management.remote.JMXServiceURL;
 import java.lang.management.ManagementFactory;
 import java.util.HashMap;
+import java.util.Objects;
 
 @Slf4j
 public class JmxMpServer implements Managed {
@@ -41,7 +42,9 @@ public class JmxMpServer implements Managed {
     @Override
     public void stop() throws Exception {
         log.info("Stopping JMXMP server");
-        cs.stop();
+        if(Objects.nonNull(cs)) {
+            cs.stop();
+        }
         log.info("Stopped JMXMP server successfully");
     }
 }

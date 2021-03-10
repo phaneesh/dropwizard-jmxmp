@@ -4,7 +4,7 @@
 
     <groupId>io.raven.dropwizard</groupId>
     <artifactId>dropwizard-jmxmp</artifactId>
-    <version>2.0.16-1</version>
+    <version>2.0.16-2</version>
     <packaging>jar</packaging>
 
     <name>dropwizard-jmxmp</name>
