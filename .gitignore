@@ -1,6 +1,7 @@
 /.idea/
 target/
 dist/
+lsp/
 .idea
 .idea_modules
 atlassian-ide-plugin.xml

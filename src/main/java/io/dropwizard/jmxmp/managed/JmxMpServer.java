@@ -31,7 +31,7 @@ public class JmxMpServer implements Managed {
             MBeanServer mbs = ManagementFactory.getPlatformMBeanServer();
             HashMap<String, ?> env = new HashMap<>();
             JMXServiceURL url = new JMXServiceURL("jmxmp", null, port);
-            JMXConnectorServer cs = JMXConnectorServerFactory.newJMXConnectorServer(url, env, mbs);
+            cs = JMXConnectorServerFactory.newJMXConnectorServer(url, env, mbs);
             cs.start();
             log.info("Started JMXMP server on port: {} successfully", port);
         } catch(Exception e) {
