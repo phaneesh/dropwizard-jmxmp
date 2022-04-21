@@ -21,7 +21,7 @@ This makes it possible to use JMX over JMXMP.
 <dependency>
     <groupId>io.dropwizard.jmxmp</groupId>
     <artifactId>dropwizard-jmxmp</artifactId>
-    <version>2.0.20-1</version>
+    <version>2.0.29-1</version>
 </dependency>
 ```
 
@@ -52,15 +52,15 @@ This makes it possible to use JMX over JMXMP.
 ```
 * Use the following commandline to start Jconsole with jmxmp support
 ```
-jconsole -J-Djava.class.path=$JAVA_HOME/lib/tools.jar:/path/to/jmxremote_optional-repackaged-5.0.jar
+jconsole -J-Djava.class.path=$JAVA_HOME/lib/tools.jar:/path/to/brooklyn-jmxmp-agent-version.jar
 ```
 * Use the following commandline to start VisualVM with jmxmp support
 ```
-jvisualvm --cp:a /path/to/jmxremote_optional-repackaged-5.0.jar
+jvisualvm --cp:a /path/to/brooklyn-jmxmp-agent-version.jar
 ```
 * To use it with JMC add the following line in the end in ```jmc.ini```
 ```
--Xbootclasspath/a:/path/to/jmxremote_optional-repackaged-5.0.jar
+-Xbootclasspath/a:/path/to/brooklyn-jmxmp-agent-version.jar
 ```
 
 * Service URL format
