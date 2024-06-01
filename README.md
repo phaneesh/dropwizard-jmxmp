@@ -1,7 +1,7 @@
 # Dropwizard JMXMP Bundle [![Travis build status](https://travis-ci.org/phaneesh/dropwizard-jmxmp.svg?branch=master)](https://travis-ci.org/phaneesh/dropwizard-jmxmp)
 
 This bundle adds support for jmx over jmxmp which is the only way to make jmx work on marathon 
-This bundle compiles only on Java 11.
+This bundle compiles only on Java 17
  
 ## Usage
 This makes it possible to use JMX over JMXMP.
@@ -21,7 +21,7 @@ This makes it possible to use JMX over JMXMP.
 <dependency>
     <groupId>io.dropwizard.jmxmp</groupId>
     <artifactId>dropwizard-jmxmp</artifactId>
-    <version>2.0.29-1</version>
+    <version>3.0.7-1</version>
 </dependency>
 ```
 
