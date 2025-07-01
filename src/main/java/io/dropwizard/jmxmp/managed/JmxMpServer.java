@@ -15,7 +15,7 @@ import java.util.Objects;
 @Slf4j
 public class JmxMpServer implements Managed {
 
-    private int port;
+    private final int port;
 
     private JMXConnectorServer cs;
 
