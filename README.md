@@ -21,7 +21,7 @@ This makes it possible to use JMX over JMXMP.
 <dependency>
     <groupId>io.dropwizard.jmxmp</groupId>
     <artifactId>dropwizard-jmxmp</artifactId>
-    <version>5.0.0-rc.3</version>
+    <version>5.0.0</version>
 </dependency>
 ```
 
@@ -41,7 +41,7 @@ This makes it possible to use JMX over JMXMP.
 
 ## Note
 * Make sure that the port that is being used is exposed in Dockerfile
-* Make sure you define port in marathon deployment configuration
+* Make sure you define port in the container deployment configuration
 * Use these JVM arguments 
 ```
  -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
