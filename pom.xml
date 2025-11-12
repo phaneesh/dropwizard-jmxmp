@@ -4,7 +4,7 @@
 
     <groupId>io.dyuti</groupId>
     <artifactId>dropwizard-jmxmp</artifactId>
-    <version>5.0.0-1</version>
+    <version>2.1.12-1</version>
     <packaging>jar</packaging>
 
     <name>dropwizard-jmxmp</name>
@@ -37,18 +37,19 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dropwizard.version>5.0.0</dropwizard.version>
-        <lombok.version>1.18.40</lombok.version>
+        <dropwizard.version>2.1.12</dropwizard.version>
+        <lombok.version>1.18.42</lombok.version>
         <guava.version>33.4.8-jre</guava.version>
         <brooklyn-jmxmp-agent.version>1.1.0</brooklyn-jmxmp-agent.version>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
         <maven-enforcer-plugin.version>3.6.1</maven-enforcer-plugin.version>
         <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.11.3</maven-javadoc-plugin.version>
         <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
+        <bouncycastle.version>1.82</bouncycastle.version>
     </properties>
 
     <dependencyManagement>
@@ -92,6 +93,17 @@
             <groupId>org.apache.brooklyn</groupId>
             <artifactId>brooklyn-jmxmp-agent</artifactId>
             <version>${brooklyn-jmxmp-agent.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.bouncycastle</groupId>
+                    <artifactId>bcprov-jdk18on</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk18on</artifactId>
+            <version>${bouncycastle.version}</version>
         </dependency>
     </dependencies>
 
@@ -157,7 +169,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
-                    <source>21</source>
+                    <source>${maven.compiler.source}</source>
                 </configuration>
                 <executions>
                     <execution>
