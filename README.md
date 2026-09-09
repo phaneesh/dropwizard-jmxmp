@@ -21,7 +21,7 @@ This makes it possible to use JMX over JMXMP.
 <dependency>
     <groupId>io.dropwizard.jmxmp</groupId>
     <artifactId>dropwizard-jmxmp</artifactId>
-    <version>5.0.0</version>
+    <version>5.0.2-1</version>
 </dependency>
 ```
 

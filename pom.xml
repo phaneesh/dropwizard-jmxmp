@@ -4,7 +4,7 @@
 
     <groupId>io.dyuti</groupId>
     <artifactId>dropwizard-jmxmp</artifactId>
-    <version>5.0.0-1</version>
+    <version>5.0.2-1</version>
     <packaging>jar</packaging>
 
     <name>dropwizard-jmxmp</name>
@@ -37,15 +37,15 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dropwizard.version>5.0.0</dropwizard.version>
+        <dropwizard.version>5.0.2</dropwizard.version>
         <lombok.version>1.18.40</lombok.version>
         <guava.version>33.4.8-jre</guava.version>
         <brooklyn-jmxmp-agent.version>1.1.0</brooklyn-jmxmp-agent.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.16.0</maven-compiler-plugin.version>
         <maven-enforcer-plugin.version>3.6.1</maven-enforcer-plugin.version>
-        <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
+        <central-publishing-maven-plugin.version>0.11.0</central-publishing-maven-plugin.version>
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
         <maven-javadoc-plugin.version>3.11.3</maven-javadoc-plugin.version>
         <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
