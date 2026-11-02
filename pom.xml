@@ -39,7 +39,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dropwizard.version>5.0.2</dropwizard.version>
         <lombok.version>1.18.40</lombok.version>
-        <guava.version>33.4.8-jre</guava.version>
+        <guava.version>33.7.1-jre</guava.version>
         <brooklyn-jmxmp-agent.version>1.1.0</brooklyn-jmxmp-agent.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
